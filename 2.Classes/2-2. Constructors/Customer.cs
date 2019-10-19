@@ -5,6 +5,11 @@
         public int Id;
         public string Name;
 
+        public Customer()
+        {
+
+        }
+
         public Customer(int Id)
         {
             this.Id = Id;
