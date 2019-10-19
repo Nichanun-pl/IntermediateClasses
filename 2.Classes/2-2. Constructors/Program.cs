@@ -2,15 +2,13 @@
 
 namespace Customer
 {
-    public class Customer
-    {
-        public int Id;
-        public string Name;
-    }
     class Program
     {
         static void Main(string[] args)
         {
+            var customer = new Customer();
+            Console.WriteLine(customer.Id);
+            Console.WriteLine(customer.Name);
         }
     }
 }
