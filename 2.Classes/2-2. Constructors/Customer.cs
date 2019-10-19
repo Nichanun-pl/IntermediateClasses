@@ -14,11 +14,13 @@ namespace Customer
         }
 
         public Customer(int Id)
+            : this()
         {
             this.Id = Id;
         }
 
         public Customer(int id, string name)
+            :this(id)
         {
             this.Id = id;
             this.Name = name;
