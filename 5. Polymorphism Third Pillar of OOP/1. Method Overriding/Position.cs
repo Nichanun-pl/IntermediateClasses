@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Method_Overriding
 {
-    class Position
+    public class Position
     {
+
     }
 }
