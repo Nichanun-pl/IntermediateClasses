@@ -1,10 +1,12 @@
-﻿namespace Amazon
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Amazon
 {
-    public class RateCalculator
+    class RateCalculator
     {
-        public int Calculator(Customer customer)
-        {
-            return 0;
-        }
     }
 }
