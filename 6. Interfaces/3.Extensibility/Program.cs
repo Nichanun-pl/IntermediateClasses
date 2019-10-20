@@ -2,6 +2,12 @@
 
 namespace Extensibility
 {
+    public interface ILogger
+    {
+        void LogError(string message);
+        void LogInfo(string message);
+    }
+
     public class DbMigrator
     {
         public void Migrator()
