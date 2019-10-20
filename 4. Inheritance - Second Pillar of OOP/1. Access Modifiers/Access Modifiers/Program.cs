@@ -6,7 +6,7 @@ namespace Access_Modifiers
     {
         public void OfferVouchar()
         {
-
+            var rsting = this.CalculateRating(excludeOrders: true);
         }
     }
     class Program

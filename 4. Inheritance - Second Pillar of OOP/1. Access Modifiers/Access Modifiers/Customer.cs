@@ -16,7 +16,7 @@ namespace Access_Modifiers
                 Console.WriteLine("Promoto to Level 2");
         }
 
-        private int CalculateRating(bool excludeOrders)
+        protected int CalculateRating(bool excludeOrders)
         {
             return 0;
         }
