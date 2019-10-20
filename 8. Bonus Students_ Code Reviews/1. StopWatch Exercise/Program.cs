@@ -34,30 +34,27 @@ namespace CSharpInTermediate
 
         private bool _running;
 
-        public void start(DateTime start)
-        {
-            if (!_running)
-            {
-                _startTime = start;
-                _running = true;
-            }
-            else
-            {
-                throw new InvalidOperationException("Stopwatch is already running");
-            }
-        }
-        public void stop(DateTime stop)
+        public void start()
         {
             if (_running)
+                throw new InvalidOperationException("Stopwatch is already running");
+            
+            _startTime = DateTime.Now;
+            _running = true;
+        }
+
+        public void stop()
+        {
+            if (_running)
+                throw new InvalidOperationException("Stopwatch is not running");
             {
-                _endTime = stop;
+                _endTime = DateTime.Now;
                 _running = false;
             }
         }
 
         public TimeSpan GetInterval()
         {
-            var duration = _endTime - _startTime;
             return duration;
         }
     }
