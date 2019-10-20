@@ -9,16 +9,7 @@ namespace Access_Modifiers
 
         public void Promoto()
         {
-            var rating = CalculateRating(excludeOrders: true);
-            if (rating == 0)
-                Console.WriteLine("Promoto to Level 1");
-            else
-                Console.WriteLine("Promoto to Level 2");
-        }
-
-        protected int CalculateRating(bool excludeOrders)
-        {
-            return 0;
+            Console.WriteLine("Promoto logic changed.");
         }
 
     }
