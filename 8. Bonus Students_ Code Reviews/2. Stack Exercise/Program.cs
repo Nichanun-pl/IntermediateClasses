@@ -31,29 +31,15 @@ namespace CSharpIntermediate
                 throw new InvalidOperationException("You cann't add a null object");
 
             _list.Add(obj);
-            int elements = _list.Count;
-            if (elements > 1)
-            {
-                for (int i = elements - 1; i > 0; i++)
-                {
-                    _list[i] = _list[i - 1];
-                }
-                _list[0] = obj;
-            }
-
         }
         public object Pop()
         {
             if (_list.Count == 0)
                 throw new InvalidOperationException("No element in the stack yet");
-            object ToReturn = _list[0];
 
-            int elements = _list.Count;
-            for (int i = 0; i < elements - 1; i++)
-            {
-                _list[i] = (int)_list[i + 1];
-            }
-            _list.Remove(elements - 1);
+            object ToReturn = _list[_list.Count - 1];
+
+            _list.RemoveAt(_list.Count - 1);
 
             return (ToReturn);
         }
