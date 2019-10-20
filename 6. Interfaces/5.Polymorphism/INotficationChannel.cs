@@ -2,6 +2,6 @@
 {
     public interface INotficationChannel
     {
-        void Send(Massage massage);
+        void Send(Message message);
     }
 }
