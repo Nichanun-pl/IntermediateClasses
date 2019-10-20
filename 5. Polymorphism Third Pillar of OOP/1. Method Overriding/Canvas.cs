@@ -19,6 +19,10 @@ namespace Method_Overriding
                     case ShapeType.Rectangle:
                         Console.WriteLine("Draw a Rectangle");
                         break;
+
+                    case ShapeType.Triangle:
+                        Console.WriteLine("Draw a Triangle");
+                        break;
                 }
             }
         }
