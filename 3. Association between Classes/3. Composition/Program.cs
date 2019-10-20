@@ -1,16 +1,10 @@
 ﻿namespace Composition
 {
-    public class DbMigrator
+    public class Installer
     {
-        private readonly Logger _logger;
-        public DbMigrator(Logger logger)
+        public Installer(Logger logger)
         {
-            _logger = logger;
-        }
 
-        public void Migrate()
-        {
-            _logger.Log("We are migrating blah blah blah...");
         }
     }
 
