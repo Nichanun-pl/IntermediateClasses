@@ -18,6 +18,8 @@ namespace CSharpInTermediate
                     Thread.Sleep(1);
                 }
 
+                stopwatch.StartTime = DateTime.Today.AddDays(1);
+                stopwatch.EndTime = DateTime.Today.AddYears(-1);
                 //stopwatch.Start(DateTime.Now);
 
                 stopwatch.stop(DateTime.Now);
