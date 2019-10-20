@@ -5,7 +5,7 @@ namespace Indexers
 {
     public class HttpCookie
     {
-        private Dictionary<string, string> _dictionary;
+        private readonly Dictionary<string, string> _dictionary;
 
         public HttpCookie()
         {
@@ -14,8 +14,8 @@ namespace Indexers
 
         public string this[string key]
         {
-            get {}
-            set {}
+            get { return _dictionary[key]; }
+            set { _dictionary[key] = value; }
         }
     }
 }
