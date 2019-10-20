@@ -11,18 +11,16 @@ namespace CSharpInTermediate
 
             for (int i = 0; i < 2; i++)
             {
-                stopwatch.start(DateTime.Now);
+                stopwatch.start(DateTime.Today.AddDays(1));
 
                 for (int j = 0; j < 1000; j++)
                 {
                     Thread.Sleep(1);
                 }
 
-                stopwatch.StartTime = DateTime.Today.AddDays(1);
-                stopwatch.EndTime = DateTime.Today.AddYears(-1);
                 //stopwatch.Start(DateTime.Now);
 
-                stopwatch.stop(DateTime.Now);
+                stopwatch.stop(DateTime.Today.AddYears(-1));
 
                 Console.WriteLine(stopwatch.GetInterval().ToString());
                 Console.ReadLine();
@@ -31,17 +29,17 @@ namespace CSharpInTermediate
     }
     public class Stopwatch
     {
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
+        private DateTime _startTime;
+        private DateTime _endTime;
 
-        private bool running = false;
+        private bool _running;
 
         public void start(DateTime start)
         {
-            if (!running)
+            if (!_running)
             {
-                StartTime = start;
-                running = true;
+                _startTime = start;
+                _running = true;
             }
             else
             {
@@ -50,16 +48,16 @@ namespace CSharpInTermediate
         }
         public void stop(DateTime stop)
         {
-            if (running)
+            if (_running)
             {
-                EndTime = stop;
-                running = false;
+                _endTime = stop;
+                _running = false;
             }
         }
 
         public TimeSpan GetInterval()
         {
-            var duration = EndTime - StartTime;
+            var duration = _endTime - _startTime;
             return duration;
         }
     }
