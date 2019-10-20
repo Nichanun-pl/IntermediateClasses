@@ -2,11 +2,11 @@
 
 namespace Polymorphism
 {
-    public class MailNotificationChannel : INotficationChannel
+    public class SmsNotificationChannel : INotficationChannel
     {
         public void Send(Message message)
         {
-            Console.WriteLine("Sending mail...");
+            Console.WriteLine("Sending SMS...");
         }
     }
 
