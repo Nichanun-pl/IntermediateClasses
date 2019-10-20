@@ -6,23 +6,13 @@ using System.Threading.Tasks;
 
 namespace Polymorphism
 {
-    public interface INotficationChannel
-    {
-        void Send(Massage massage);
-    }
-
-    public class Message
-    {
-
-    }
 
     public class VideoEncoder
     {
-        private readonly MailService _mailService;
-
+        private readonly IList<INotficationChannel> _notificationChannels;
         public VideoEncoder()
         {
-            _mailService = new MailService();
+            _notificationChannels = new List<INotficationChannel>();
         }
 
         public void Encode(Video video)
@@ -30,7 +20,8 @@ namespace Polymorphism
             //Video encoding logic
             //...
 
-            _mailService.Send(new Mail());
+            foreach (var channel in _notificationChannels)
+                channel.Send(new Message());
         }
     }
 }
