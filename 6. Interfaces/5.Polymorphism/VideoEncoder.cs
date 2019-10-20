@@ -6,9 +6,19 @@ using System.Threading.Tasks;
 
 namespace Polymorphism
 {
+    public interface INotficationChannel
+    {
+        void Send(Massage massage);
+    }
+
+    public class Message
+    {
+
+    }
+
     public class VideoEncoder
     {
-        private readonly MailService mailService;
+        private readonly MailService _mailService;
 
         public VideoEncoder()
         {
