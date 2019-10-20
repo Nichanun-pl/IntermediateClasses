@@ -2,14 +2,11 @@
 
 namespace Abstract_Classes
 {
-    public class Shape
+    public class Circle : Shape
     {
-        public int Width { get; set; }
-        public int Height { get; set; }
-
-        public virtual void Draw()
+        public override void Draw()
         {
-
+            Console.WriteLine("Draw a cicle");
         }
     }
 
