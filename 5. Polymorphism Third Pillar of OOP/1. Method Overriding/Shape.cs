@@ -6,12 +6,15 @@ namespace Method_Overriding
 {
     public class Circle : Shape
     {
-
+        public override void Draw()
+        {
+            Console.WriteLine("Draw a circle");
+        }
     }
 
     public class Rectangle : Shape
     {
-
+        Console.WriteLine("Draw a Rectangle");
     }
 
     public class Shape
@@ -19,6 +22,10 @@ namespace Method_Overriding
         public int Width { get; set; }
         public int Height { get; set; }
         public Position Position { get; set; }
-        public ShapeType Type { get; set; }
+    }
+
+    public virtual void Draw()
+    {
+
     }
 }
