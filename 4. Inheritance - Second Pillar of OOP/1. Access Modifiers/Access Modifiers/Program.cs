@@ -27,6 +27,7 @@ namespace Access_Modifiers
         static void Main(string[] args)
         {
             var customer = new Customer();
+            var rating = customer.CalculateRating();
         }
     }
 }
