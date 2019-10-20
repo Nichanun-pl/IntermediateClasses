@@ -24,7 +24,7 @@ namespace Polymorphism
                 channel.Send(new Message());
         }
 
-        public void RegisterNotificationChannel(INotificationChannel channel)
+        public void RegisterNotificationChannel(INotficationChannel channel)
         {
             _notificationChannels.Add(channel);
         }
