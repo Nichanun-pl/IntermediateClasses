@@ -1,6 +1,8 @@
-﻿namespace Polymorphism
+﻿using System;
+
+namespace Polymorphism
 {
-    public interface INotficationChannel
+    public interface INotificationChannel
     {
         public class MailNotificationChannel : INotificationChannel
         {
