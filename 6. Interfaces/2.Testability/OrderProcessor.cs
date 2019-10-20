@@ -1,12 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Testability
 {
     public class OrderProcessor
     {
         private readonly IShippingCalculator _shippingCalculator;
+
+        public OrderProcessor()
+        {
+        }
 
         public OrderProcessor(IShippingCalculator shippingCalculator)
         {
@@ -20,7 +22,7 @@ namespace Testability
 
             order.Shipment = new Shipment
             {
-                Cost = _shippingCalculator.CalculateShipping(order),
+                Cost = _shippingCalculator.CalCalculateShipping(order),
                 shippingDate = DateTime.Today.AddDays(1)
             };
         }
