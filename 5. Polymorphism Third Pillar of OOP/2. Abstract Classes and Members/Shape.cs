@@ -1,13 +1,20 @@
 ﻿namespace Abstract_Classes
 {
-    public class Shape
+    public abstract class Shape
     {
         public int Width { get; set; }
         public int Height { get; set; }
 
-        public virtual void Draw()
-        {
+        public abstract void Draw();
 
+        public void Copy()
+        {
+            System.Console.WriteLine("Copy shape into clipboard.");
+        }
+
+        public void Select()
+        {
+            System.Console.WriteLine("Select ihe shape.");
         }
     }
 }
