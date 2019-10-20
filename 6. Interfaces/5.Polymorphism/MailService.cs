@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Polymor
+namespace Polymorphism
 {
     public class MailService
     {
