@@ -4,7 +4,9 @@ using System.Text;
 
 namespace Method_Overriding
 {
-    class ShapeType
+    public enum ShapeType
     {
+        Circle,
+        Rectangle
     }
 }
