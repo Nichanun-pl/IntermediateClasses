@@ -1,12 +1,10 @@
-﻿using System;
-
-namespace Composition
+﻿namespace Composition
 {
-    public class Logger
+    public class DbMigrator
     {
-        public void Log(string message)
+        public DbMigrator(Logger logger)
         {
-            Console.WriteLine(message);
+
         }
     }
 
