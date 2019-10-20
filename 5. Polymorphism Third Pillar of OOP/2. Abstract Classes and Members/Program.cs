@@ -1,4 +1,6 @@
-﻿namespace Abstract_Classes
+﻿using System;
+
+namespace Abstract_Classes
 {
     public class Rectangle : Shape
     {
