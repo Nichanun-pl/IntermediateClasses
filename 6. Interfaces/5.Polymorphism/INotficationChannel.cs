@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace Polymorphism
+﻿namespace Polymorphism
 {
-    public interface INotificationChannel
+    public interface INotficationChannel
     {
         void Send(Message message);
     }
