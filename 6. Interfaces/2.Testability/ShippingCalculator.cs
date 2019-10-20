@@ -4,7 +4,12 @@ using System.Text;
 
 namespace Testability
 {
-    public class ShippingCalculator
+    public interface IShippingCalculator
+    {
+        float CalCalculateShipping(Order order);
+    }
+
+    public class ShippingCalculator : IShippingCalculator
     {
         public float CalCalculateShipping(Order order)
         {
